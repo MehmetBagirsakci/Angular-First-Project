@@ -1,0 +1,74 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">{{pageName}} Token Control {{tokenControl()}}</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Starter Page</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <div class="content">
+        <div class="container-fluid">
+            <div *ngIf="!dataLoaded" class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                    <div *ngIf="dataLoaded" class="card card-primary card-outline">
+                        <div class="card-header">
+                            <h5 class="m-0">Ürünler</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" [(ngModel)]="filterText" placeholder="Aranacak kelimeyi girin">
+                            </div>
+                            <div *ngIf="filterText.length>2" class="alert alert-success">
+                                {{filterText}} aradınız.
+                            </div>
+                            <table  class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>ProductId</th>
+                                        <th>Ürün</th>
+                                        <th>Kategori</th>
+                                        <th>Fiyat</th>
+                                        <th>Kdvli Fiyat</th>
+                                        <th>Stok Adedi</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let product of products |productFilterPipe:filterText">
+                                        <td>{{product.productId}}</td>
+                                        <td>{{product.productName |uppercase}}</td>
+                                        <td>{{product.categoryId}}</td>
+                                        <td>{{product.unitPrice}}</td>
+                                        <td>{{product.unitPrice |vatAdded:18 |currency}}</td>
+                                        <td>{{product.unitsInStock}}</td>
+                                        <td><button (click)="addToCart(product)" class="btn btn-success">Sepete Ekle</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+</div>

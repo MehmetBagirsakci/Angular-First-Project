@@ -1,0 +1,22 @@
+      <!-- Notifications Dropdown Menu -->
+      <li *ngIf="cartItems.length>0" class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span *ngIf="cartItems" class="badge badge-warning navbar-badge">{{countOfProductQuantity()}}</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span *ngIf="cartItems" class="dropdown-header">{{countOfProductQuantity()}} ürün sepetinizde var</span>
+          <div *ngFor="let cartItem of cartItems" class="loop">
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-envelope mr-2"></i> {{cartItem.product.productName}}
+              <span class="float-right text-muted text-sm">{{cartItem.quantity}}</span>
+              <span (click)="removeFromChart(cartItem.product)" class="badge bg-warning">SİL</span>
+            </a>
+          </div>
+
+
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">Sepete Git</a>
+        </div>
+      </li>

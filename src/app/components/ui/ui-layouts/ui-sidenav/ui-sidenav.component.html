@@ -1,0 +1,227 @@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a href="index3.html" class="brand-link">
+    <img src="/assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      style="opacity: .8">
+    <span class="brand-text font-weight-light">AdminLTE 3</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="/assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+      </div>
+      <div class="info">
+        <a href="#" class="d-block">Alexander Pierce</a>
+      </div>
+    </div>
+
+
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+        <li class="nav-item">
+          <a routerLink="/" class="nav-link">
+            <i class="nav-icon fas fa-th"></i>
+            <p>
+              Anasayfa
+              <span class="right badge badge-danger">New</span>
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/contact" class="nav-link">
+            <i class="nav-icon fas fa-copy"></i>
+            <p>
+              WebApi
+              <span class="right badge badge-danger">New</span>
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/products/add" class="nav-link">
+            <i class="nav-icon fas fa-edit"></i>
+            <p>
+              Ürün Ekle
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a (click)="OturumuKapat()" class="nav-link">
+            <i class="nav-icon fas fa-edit"></i>
+            <p>
+              Oturumu Kapat
+            </p>
+          </a>
+        </li>
+        <!-- Okul -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-tree"></i>
+            <p>
+              Okul
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview" style="display: none;">
+            <li class="nav-item">
+              <a href="pages/UI/general.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Okul Sayısı</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/UI/icons.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Eğitim Kademlerine Göre</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/UI/buttons.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Okul Türüne Göre</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/UI/sliders.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Eğitim Yıllarına Göre</p>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+        <!-- Derslik -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-tree"></i>
+            <p>
+              Derslik
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview" style="display: none;">
+            <li class="nav-item">
+              <a href="pages/UI/general.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Derslik Sayısı</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/UI/icons.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Eğitim Kademlerine Göre</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/UI/buttons.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Okul Türüne Göre</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/UI/sliders.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Eğitim Yıllarına Göre</p>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+        <!-- Öğrenci -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-tree"></i>
+            <p>
+              Öğrenci
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview" style="display: none;">
+            <li class="nav-item">
+              <a href="pages/UI/general.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Öğrenci Sayısı</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/UI/icons.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Eğitim Kademlerine Göre</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/UI/buttons.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Okul Türüne Göre</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/UI/sliders.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Eğitim Yıllarına Göre</p>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+        <!-- Öğretmen -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-tree"></i>
+            <p>
+              Öğretmen
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview" style="display: none;">
+            <li class="nav-item">
+              <a href="pages/UI/general.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Öğretmen Sayısı</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/UI/icons.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Eğitim Kademlerine Göre</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/UI/buttons.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Okul Türüne Göre</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/UI/sliders.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Eğitim Yıllarına Göre</p>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+
+
+        <ul class="list-group">
+          <li (click)="clearCurrentCategory()" routerLink="/products" [class]="getAllCategoryClass()">Tüm Ürünler</li>
+          <li 
+          (click)="setCurrentCategory(category)" 
+          *ngFor="let category of categories" 
+          [class]="getCurrentCategoryClass(category)"
+          routerLink="/products/category/{{category.categoryId}}">{{category.categoryName}}</li>
+        </ul>
+        <h5 *ngIf="currentCategory">{{currentCategory.categoryName}} seçtiniz</h5>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>

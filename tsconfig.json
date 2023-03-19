@@ -6,6 +6,8 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictNullChecks":false,//Cart itemi silerken eklememiz gerekti.
+    "strictPropertyInitialization": false,//biz ekledik. nesne başlatmayı kapatmak için
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
